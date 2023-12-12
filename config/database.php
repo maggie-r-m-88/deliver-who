@@ -92,6 +92,20 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+        'mongodb' => [
+            'driver'   => 'mongodb',
+            'host'     => ['ac-tuvunlq-shard-00-01.vidymuo.mongodb.net', 'ac-tuvunlq-shard-00-02.vidymuo.mongodb.net', 'ac-tuvunlq-shard-00-00.vidymuo.mongodb.net'],
+            'port'     => env('MONGO_DB_PORT', 27017),
+            'database' => env('MONGO_DB_DATABASE'),
+            'username' => env('MONGO_DB_USERNAME'),
+            'password' => env('MONGO_DB_PASSWORD'),
+            'options'  => [
+                'ssl' => true,
+                'authSource' => 'admin',
+                'replicaSet' => 'atlas-183zb9-shard-0'
+            ]
+        ],
+        
 
     ],
 

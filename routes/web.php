@@ -28,6 +28,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/test-mongodb', function () {
+    try {
+        $connection = DB::connection('mongodb')->getMongoDB();
+        echo "Connected to MongoDB successfully!";
+    } catch (\Exception $e) {
+        echo "Error connecting to MongoDB: " . $e->getMessage();
+    }
+});
 
 
 require __DIR__.'/auth.php';
