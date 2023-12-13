@@ -10,7 +10,7 @@ class SpotifyAuthController extends Controller
 {
     //
 
-    public function authenticate(Request $request)
+    public function authenticate()
     {
         $client = new Client();
 
