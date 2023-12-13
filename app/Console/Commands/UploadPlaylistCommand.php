@@ -19,7 +19,7 @@ class UploadPlaylistCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Upload a playlist';
+    protected $description = 'Upload a playlist to track library';
 
     /**
      * Execute the console command.
